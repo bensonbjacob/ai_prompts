@@ -1,11 +1,19 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 import Profile from '@components/Profile';
 
 const UserProfile = ({ params }) => {
+  const { data: session, status } = useSession();
+
+  if (!session) {
+    redirect('/');
+  }
+
   const searchParams = useSearchParams();
   const userName = searchParams.get('name');
 
