@@ -47,7 +47,10 @@ const Nav = () => {
 
             <button
               type='button'
-              onClick={signOut}
+              onClick={() => {
+                signOut();
+                router.push('/');
+              }}
               className='outline_btn'
             >
               Sign Out
@@ -114,6 +117,7 @@ const Nav = () => {
                   onClick={() => {
                     setToggleDropdown(false);
                     signOut();
+                    router.push('/');
                   }}
                 >
                   Sign Out
