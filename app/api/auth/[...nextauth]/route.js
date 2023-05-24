@@ -1,6 +1,5 @@
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
-import { signIn } from 'next-auth/react';
 import { connectToDB } from '@utils/database';
 import User from '@models/user';
 
@@ -21,7 +20,7 @@ const handler = NextAuth({
 
       return session;
     },
-    async signIn({ profile }) {
+    async signIn({ account, profile, user, credentials }) {
       try {
         await connectToDB();
 

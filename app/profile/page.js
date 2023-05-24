@@ -7,15 +7,20 @@ import Profile from '@components/Profile';
 
 const MyProfile = () => {
   const router = useRouter();
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/signin');
+    },
+  });
 
   const [myPosts, setMyPosts] = useState([]);
   const [postToDelete, setPostToDelete] = useState(null);
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 
-  if (!session) {
-    redirect('/');
-  }
+  // if (!session) {
+  //   redirect('/');
+  // }
 
   useEffect(() => {
     const fetchPosts = async () => {

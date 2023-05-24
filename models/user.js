@@ -17,6 +17,11 @@ const UserSchema = new Schema({
   image: {
     type: String,
   },
+  role: {
+    type: String,
+    enum: ['admin', 'user'], // Add the roles 'admin' and 'user'
+    default: 'user', // Set the default role to 'user'
+  },
 });
 
 const User = models.User || model('User', UserSchema);

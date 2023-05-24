@@ -8,11 +8,16 @@ import { redirect } from 'next/navigation';
 import Profile from '@components/Profile';
 
 const UserProfile = ({ params }) => {
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/signin');
+    },
+  });
 
-  if (!session) {
-    redirect('/');
-  }
+  // if (!session) {
+  //   redirect('/');
+  // }
 
   const searchParams = useSearchParams();
   const userName = searchParams.get('name');
