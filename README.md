@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prompts
 
-## Getting Started
+[Live App](https://share-prompts-gamma.vercel.app)
 
-First, run the development server:
+Prompts is a CRUD application built with Next.js, Tailwind CSS, and MongoDB. It allows users to create, discover, and share AI prompts, fostering a collaborative environment for creative writing and ideation. With Prompts, you can unleash your imagination and explore a diverse range of prompts contributed by others.
+
+## Features
+
+- Create AI Prompts: Generate and submit your own AI prompts to inspire others and spark their creativity.
+- Explore the Feed: Browse through a dynamic feed of AI prompts contributed by users worldwide.
+- Search and Filter: Find specific prompts or narrow down your search based on different categories or tags.
+- Responsive Design: Enjoy a seamless experience on different devices, thanks to the app's responsive layout.
+
+## Installation
+
+### Clone the repository and install dependencies   
+
+```bash
+git clone https://github.com/bensonbjacob/ai_prompts.git
+cd ai_prompts
+npm install
+```
+
+### Configure Environment Variables
+
+1.  Create an .env file
+2.  Add the following fields along with your own environment variables
+
+```javascript
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+MONGODB_URI=
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=
+```
+
+### Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
