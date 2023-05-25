@@ -11,9 +11,11 @@ const Home = () => {
         </span>
       </h1>
       <p className='desc text-center'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Dolor dignissimos ipsa, provident cupiditate repudiandae esse
-        alias repellendus!
+        Prompts allows users to create, discover, and share AI
+        prompts, fostering a collaborative environment for creative
+        writing and ideation. With Prompts, you can unleash your
+        imagination and explore a diverse range of prompts contributed
+        by others.
       </p>
 
       <Feed />
